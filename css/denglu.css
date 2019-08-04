@@ -1,0 +1,90 @@
+.imgLogo{
+	width: 1130px;
+	height: 98px;
+	margin: 0 auto;
+}
+
+.imgs{
+	width: 100%;
+	height: 588px;
+	background: url(../img/denglu.jpg) center;
+	
+}
+
+.dengluTit{
+	width: 410px;
+	height: 82px;
+	background: #fff;
+	position: absolute;
+	top: 130px; 
+	right: 60px;
+	text-align: center;
+	line-height: 82px;
+	font-size: 22px;
+	color: #666;
+}
+.dengluTit a{	
+	color: #666;
+}
+.dengluTit a:first-child{
+	color: #f56600;
+}
+.dengluTit a:hover{
+	color: #f56600;
+}
+.dengluTit span{
+	margin: 0 40px;
+}
+.denglu{
+	width: 410px;
+	height: 500px;
+	background: #fff;
+	position: absolute;
+	top:82px; 
+	left: 0;
+}
+.denglu input{
+	display: block;
+	width: 348px;
+	height: 50px;
+	margin: 0 auto 14px;
+	border: 1px solid #e0e0e0;
+	text-indent: 10px;
+
+}
+.submit{
+	width: 350px;
+	color: #fff;
+	background: #f56600;
+}
+.zhaohui{
+	width: 348px;
+	margin: 0 auto;
+	font-size: 14px;
+	text-align: right;
+	line-height: 16px;
+}
+.zhaohui a:first-child{
+	color: #f56600;
+	float: left;
+}
+.zhaohui span{
+	margin: 0 3px;
+}
+
+.fool{
+	text-align: center;
+	line-height: 36px;
+	font-size: 14px;
+	color: #666;
+	margin: 100px 0 30px;
+}
+.fool a{
+	color: #666;
+}
+.fool span{
+	margin: 0 3px;
+}
+.fool a:hover{
+	color: #000;
+}

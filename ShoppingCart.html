@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<link rel="stylesheet" type="text/css" href="css/gongyong.css">
+	<style>
+	.imgLogo{
+		width: 1226px;
+		height: 77px;
+		margin: 0 auto;
+		padding-top: 22px;
+	}
+	.logoBox{
+		float: left;
+	}
+	.imgLogo p{
+		font-size: 30px;
+		line-height: 55px;
+		margin: 0 10px 0 50px ;
+		display: inline-block;
+	}
+	.imgLogo span{
+		font-size: 12px;
+		color: #757575;
+	}
+	.boxCar{
+		width: 100%;
+		overflow: hidden;
+		background: #f5f5f5;
+		border-top: 2px solid #ff6700;
+	}
+	.boxCar table{
+		width: 1226px;
+	}
+	.boxCar table tr{
+		height: 80px;
+
+	}
+	.boxCar table input{
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+		/*border-radius: 50%;*/
+		background: #fff;
+		border: none;
+	}
+	
+	</style>
+</head>
+<body>
+<div class="imgLogo">
+	<div class="logoBox"><a class="logo" href="#" title="小米商城"></a></div>
+	<p>我的购物车</p>
+	<span>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</span>
+</div>
+<div id="shoppingCar" class="boxCar"></div>
+	
+</body>
+</html>
+<script type="text/javascript" src="js/ShoppingCarLocalStorage.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+
+window.onload = function(){
+	
+	// //5、购物车
+	let objs=null;
+	//从localStorage中取数据。
+	// let str = localStorage.getItem("datas");
+	// if(str){
+	// 	objs = JSON.parse(str);
+	// }else{
+		objs = [
+				{
+					" ":"<img width='80px' src='img/shouji/mi9.jpg'>",
+					"商品名称":"彩虹5号电池（10粒装） 标准装",
+					"单价":9.9,
+					"数量":1
+				},
+				{
+					" ":"<img width='80px' src='img/shouji/mi9.jpg'>",
+					"商品名称":"小米路由器4C 白色",
+					"单价":99,
+					"数量":1
+				},
+				{
+					" ":"<img width='80px' src='img/shouji/mi9.jpg'>",
+					"商品名称":"小米9 全网通版 6GB内存 全息幻彩紫 128GB",
+					"单价":2799,
+					"数量":1
+				}
+			];
+	// }
+	new ShoppingCar(objs,$("#shoppingCar")[0]);
+
+
+
+	console.log()
+	let xxx = $("input[value='x']");
+	for(let i ;i<xxx.length;i++) {
+		xxx[i]. css({
+			'border-radius': '50%'
+		})
+	}
+}
+
+
+
+</script>

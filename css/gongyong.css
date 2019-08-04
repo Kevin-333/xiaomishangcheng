@@ -1,0 +1,160 @@
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,hr,form,input,textarea{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+
+/*头部*/
+header{
+	position: relative;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+.header{
+	width: 1226px;
+    margin: 0 auto;
+}
+.headerLeft{
+	float: left;
+    height: 40px;
+    line-height: 40px;
+}
+.headerLeft a{
+	color: #b0b0b0;
+	margin-right: 6px;
+    display: inline-block;
+}
+.headerLeft a:hover{
+	color: #fff;
+}
+
+.headerCenter{
+	position: relative;
+    float: right;
+    height: 40px;
+    margin-right: 20px;
+}
+.headerCenter a{
+	color: #b0b0b0;
+	margin-right: 6px;
+    display: inline-block;
+    line-height: 40px;
+	margin-right: 10px;
+}
+.headerCenter a:hover{
+	color: #fff;
+}
+
+.headerRight{
+	position: relative;
+    float: right;
+    width: 120px;
+    height: 40px;
+}
+.headerRight a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+    background: #424242;
+
+}
+.headerRight .gouWu{
+	display: none;
+    position: absolute;
+    right: 0;    
+    top: 40px;
+    width: 316px;
+    padding: 15px 0 0;
+    color: #424242;
+    background: #fff;
+    -webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+.headerRight a:hover{
+	background: #fff;
+	color: #ff6700;
+}
+
+/*导航栏*/
+nav{
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoBox{
+    background-color: #ff6700;
+    width: 55px;
+    height: 55px;
+}
+.logoBox .logo{
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url(../img/logo.png) no-repeat 50% 50%;
+}
+
+nav form{
+    
+}
+
+nav .text{
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    border-right: none;
+    font-size: 14px;
+    line-height: 48px;
+    vertical-align: top;
+}
+nav .button{
+    width: 52px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #616161;
+    vertical-align: top;
+
+}
+nav .button:hover{
+    background: #ff6700;
+}
+nav .navBox{
+    display: inline-block;
+    padding-left: 80px;
+}
+nav .navBox a{
+    color: black;
+    font-size: 16px;
+    line-height: 100px;
+    text-align: center;
+    margin: 0 10px;
+
+}
+nav .navBox a:hover{
+    color: #ff6700;
+}
+
+
+/*小单元划过*/
+.dybox:hover{
+    box-shadow:  0 8px 15px #8080804d;
+    transform:translateY(-6px);
+}
