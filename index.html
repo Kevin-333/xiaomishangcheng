@@ -16,7 +16,7 @@
 			<a href="#">MIUI</a>
 			<a href="#">IoT</a>
 			<a href="#">云服务</a>
-			<a href="#">金融</a>
+ 			<a href="#">金融</a>
 			<a href="#">有品</a>
 			<a href="#">小爱开放平台</a>
 			<a href="#">企业团购</a>
@@ -26,21 +26,21 @@
 			<a href="#">Select Region</a>
 		</div>
 		<div class="headerRight">
-			<a href="#">购物车(0)</a>
+			<a href="ShoppingCart.html" target="_blank">购物车(0)</a>
 			<div class="gouWu">
 				<p>购物车中还没有商品，赶紧选购吧！</p>
 			</div>
 		</div>
 		<div class="headerCenter">
 			<a href="denglu.html" target="_blank">登录</a>
-			<a href="#">注册</a>
+			<a href="zhuce.html" target="_blank">注册</a>
 			<a href="#">消息通知</a>
 		</div>		
 	</div>
 </header>
 <!-- 导航栏 -->
 <nav>
-	<div class="logoBox"><a class="logo" href="#" title="小米商城"></a></div>
+	<div class="logoBox"><a class="logo" href="index.html" title="小米商城"></a></div>
 	<div class="navBox">
 		<a href="#">小米手机</a>
 		<a href="#">Redmi 红米</a>
@@ -56,11 +56,12 @@
 		<input type="text" class="text"><input type="button" class="button">
 	</form>
 </nav>
+
 <!-- 细分导航和轮播图 -->
 <div id="lunBuoTu" class="zhnaShi" >
 	<div id="zongNav">
 		<ul class="xiangxiNav">
-			<li><a href="#">手机 电话卡</a><span>></span></li>
+			<li><a href="phone.html">手机 电话卡</a><span>></span></li>
 			<li><a href="#">电视 盒子</a><span>></span></li>
 			<li><a href="#">笔记本 平板</a><span>></span></li>
 			<li><a href="#">家电 插线板</a><span>></span></li>
@@ -115,10 +116,11 @@
 
 
 </div>
-
+     
 </body>
 </html>
 <!--  -->
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/lunbuotu.js"></script>
 <script type="text/javascript" src="js/guangGaoDanYuan.js"></script>
 <script type="text/javascript" src="js/shangpinxianglie.js"></script>
@@ -128,8 +130,9 @@ window.onload = function(){
 	new BannerPlayer({
 		width:1226,
 		height:460,
+		leftdivL:234,	
 		imgs:["img/lunbuotu1.jpg","img/lunbuotu2.jpg","img/lunbuotu3.jpg","img/lunbuotu4.jpg"],
-	},$("#lunBuoTu"));
+	},$("#lunBuoTu")[0]);
 	// 手机
 	new DanYuan({
 		url:"img/shouji/mi9.jpg",
@@ -137,21 +140,21 @@ window.onload = function(){
 		textP:"骁龙855，索尼4800万超广角微距三摄",
 		jiage1:"2799元",
 		jiage2:"2999元",
-	},$("#sjDanYuan"));
+	},$("#sjDanYuan")[0]);
 	for(let i=0;i<6;i++){
 		new DanYuan({
 			url:"img/shouji/miMIX.jpg",
 			textH:"小米MIX 3 6GB+128GB",
 			textP:"磁动力滑盖全面屏 / 四曲面陶瓷机身",
 			jiage1:"3299元",
-		},$("#sjDanYuan"));
+		},$("#sjDanYuan")[0]);
 	}	
 	new DanYuan({
 		url:"img/shouji/RedmiNote7Pro.jpg",
 		textH:"Redmi Note 7 Pro",
 		textP:"6GB+128GB大存储，索尼4800万拍照",
 		jiage1:"1599元",
-	},$("#sjDanYuan"));
+	},$("#sjDanYuan")[0]);
 	
 	// 家电
 	for(let i=0;i<8;i++){
@@ -161,7 +164,7 @@ window.onload = function(){
 			textP:"64位四核处理器 / 1GB+4GB大内存",
 			jiage1:"769元",
 			jiage2:"799元",
-		},$("#jdDanYuan"));
+		},$("#jdDanYuan")[0]);
 	}
 
 	// 商品细列
@@ -189,36 +192,19 @@ window.onload = function(){
 
 	for(let i=0;i<lis.length;i++){
 		lis[i].onmouseover = function(){
-			$("#shangPing").innerHTML = '';
+			$("#shangPing")[0].innerHTML = '';
 			new Spdanyuan({
 				divHeight:75,
 				boxHeight:460,
 				imgs:imgs[i], 
 				texts:texts
-			},$("#shangPing"));
+			},$("#shangPing")[0]);
 		}			
 	}
-	$("#zongNav").onmouseleave = function(){
-		console.log($("#zongNav"));
-		$("#shangPing").innerHTML = '';
-		$("#shangPing").style.width = `0px`;
+	$("#zongNav")[0].onmouseleave = function(){
+		$("#shangPing")[0].innerHTML = '';
+		$("#shangPing")[0].style.width = `0px`;
 	}				
-
-
-
-
-
 }
-
-
 	
-function $(str){
-	if(str.charAt(0)=="#"){
-		return document.getElementById(str.substring(1));
-	}else if(str.charAt(0)=="."){
-		return document.getElementsByClassName(str.substring(1));
-	}else{
-		return document.getElementsByTagName(str);
-	}
-}	
 </script>

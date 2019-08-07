@@ -95,6 +95,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+	background: #fff;
 }
 .logoBox{
     background-color: #ff6700;

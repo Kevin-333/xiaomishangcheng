@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>小米手机</title>
+	<link rel="stylesheet" type="text/css" href="css/gongyong.css">	
+	<link rel="stylesheet" type="text/css" href="css/phone.css">	
+</head>
+<body>
+<!-- 头部 -->
+<header>
+	<div class="header">
+		<div class="headerLeft">
+			<a href="#">小米商城</a>
+			<a href="#">MIUI</a>
+			<a href="#">IoT</a>
+			<a href="#">云服务</a>
+			<a href="#">金融</a>
+			<a href="#">有品</a>
+			<a href="#">小爱开放平台</a>
+			<a href="#">企业团购</a>
+			<a href="#">资质证照</a>
+			<a href="#">协议规则</a>
+			<a href="#">下载app</a>
+			<a href="#">Select Region</a>
+		</div>
+		<div class="headerRight">
+			<a href="ShoppingCart.html" target="_blank">购物车(0)</a>
+			<div class="gouWu">
+				<p>购物车中还没有商品，赶紧选购吧！</p>
+			</div>
+		</div>
+		<div class="headerCenter">
+			<a href="denglu.html" target="_blank">登录</a>
+			<a href="zhuce.html" target="_blank">注册</a>
+			<a href="#">消息通知</a>
+		</div>		
+	</div>
+</header>
+<!-- 导航栏 -->
+<nav>
+	<div class="logoBox"><a class="logo" href="index.html" title="小米商城"></a></div>
+	<div class="navBox">
+		<a href="#">小米手机</a>
+		<a href="#">Redmi 红米</a>
+		<a href="#">电视</a>
+		<a href="#">笔记本</a>
+		<a href="#">家电</a>
+		<a href="#">路由器</a>
+		<a href="#">智能硬件</a>
+		<a href="#">服务</a>
+		<a href="#">社区</a>
+	</div>
+	<form>
+		<input type="text" class="text"><input type="button" class="button">
+	</form>
+</nav>
+<!-- 轮播图 -->	
+<div id="lunBuoTu" class="zhnaShi" ></div>
+<!-- 产品 -->
+<div class="phoneChanpin">
+	<h2>明星产品</h2>
+	<div class="zhuda">		
+		<a class="zhudaImg" href="#"><img src="img/shouji/097f0cf50bebae139744def8bc62d6df.jpg" alt=""></a>
+		<div class="zhudaText">
+			<h2><a href="#">Redmi K20 Pro</a></h2>
+			<p>骁龙855处理器, 弹出式极界全面屏</p>
+			<p><span>2299</span>元起&nbsp;&nbsp;<s>2599元</s></p>
+			<p><a href="#">了解产品></a></p>
+		</div>				
+	</div>
+	
+	<div class="phone_call"></div>
+	
+	
+	
+</div>
+	
+	
+	
+</body>
+</html>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/ajax.js"></script>
+<script type="text/javascript" src="js/lunbuotu.js"></script>
+<script type="text/javascript" src="js/phonecall.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+	new BannerPlayer({
+		width:1226,
+		height:620,
+		ulPosition:"中",
+		imgs:["img/shouji/phone1.jpg","img/shouji/phone2.jpg"],
+	},$("#lunBuoTu")[0]);
+	
+	new Phonecall({
+		url:"img/shouji/redmi-k20.jpg",
+		textTit:"Redmi K20",
+		textP:"弹出全面屏，4800万三摄",
+		jiage1:"2299"
+	},$(".phone_call")[0])	
+		new Phonecall({
+			url:"img/shouji/redmi-k20.jpg",
+			textTit:"Redmi K20",
+			textP:"弹出全面屏，4800万三摄",
+			jiage1:"2299"
+		},$(".phone_call")[0])
+		new Phonecall({
+			url:"img/shouji/redmi-k20.jpg",
+			textTit:"Redmi K20",
+			textP:"弹出全面屏，4800万三摄",
+			jiage1:"2299"
+		},$(".phone_call")[0])
+		
+		
+		
+		ajax({
+			"url":"php/getGoodsInfo.php",
+			"param":"goodsId=001",
+			"func":chuang
+		})
+}
+function chuang(src){
+	console.log(src);
+	let arr = JSON.parse(src);
+	new Phonecall({
+		url:arr.goodsImg,
+		textTit:arr.goodsName,
+		textP:arr.goodsDesc,
+		jiage1:arr.goodsPrice
+	},$(".phone_call")[0])
+	
+	
+}		
+</script>
+<!-- {"goodsId":"001",
+		"goodsName":"Redmi K20",
+		"goodsType":"手机",
+		"goodsPrice":"2299",
+		"goodsCount":"1",
+		"goodsDesc":"弹出全面屏，4800万三摄",
+		"goodsImg":"img/shouji/redmi-k20.jpg",
+		"beiyong1":"",
+		"beiyong2":"",
+		"beiyong3":"",
+		"beiyong4":"",
+		"beiyong5":"",
+		"beiyong6":"",
+		"beiyong7":"",
+		"beiyong8":"",
+		"beiyong9":"",
+		"beiyong10":"",
+		"beiyong11":"",
+		"beiyong12":"",
+		"beiyong13":""
+		} -->

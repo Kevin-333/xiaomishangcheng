@@ -10,11 +10,13 @@ class BannerPlayer{
 		let defaultObj = {
 			width:400,
 			height:300,
-			imgs:[],			
+			imgs:[],
+			leftdivL:0,
+			ulPosition:"",
 			timeSpace:100,		
 			douIsCircle:true,
 			myTimer:null,
-			ord:0,
+			ord:0
 		}
 
 		for(let key in defaultObj){
@@ -41,7 +43,7 @@ class BannerPlayer{
 				position: absolute;
 				left:0px;
 				top:0px;
-				width: 100%;
+				
 				height: 100%;	
 				z-index: 1;`;	
 
@@ -63,8 +65,15 @@ class BannerPlayer{
 				position: absolute;
 				list-style: none;
 				z-index: 3;`;	
-		doudouBox.style.right = "50px";
 		doudouBox.style.bottom = "20px";
+		if (this.ulPosition == "中") {
+			let num = (this.width-(this.imgs.length*6))/2;
+			doudouBox.style.right = `${num}px`;
+			
+		}else{
+			doudouBox.style.right = "50px";
+		}
+		
 			
 		this.boxDom.appendChild(doudouBox);
 
@@ -104,7 +113,7 @@ class BannerPlayer{
 		leftDivDom.innerHTML= '<'
 		leftDivDom.style.cssText = `
 				position: absolute;
-				left:234px;
+				left:${this.leftdivL}px;
 				top:0;
 				height: 100%;
 				width: 30px;
