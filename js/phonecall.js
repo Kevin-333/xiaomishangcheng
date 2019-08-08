@@ -20,16 +20,16 @@ class Phonecall{
 			}
 		}
 		this.render();
-		// this.huaGuo();
 	}
 
 	render(){
 		let dyDom = document.createElement("div");
 		dyDom.className = "dybox";
-		dyDom.style = `
+		dyDom.style = `		
 			width: 606px;
 			height: 482px;
 			background: #fff;
+			margin-top: 14px;
 		`;
 
 

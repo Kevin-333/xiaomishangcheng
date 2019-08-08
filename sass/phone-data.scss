@@ -1,0 +1,103 @@
+
+@charset "utf-8";
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,td,hr,form,input,textarea{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+}
+a{
+	text-decoration: none;
+}
+img{
+	border: none;
+}
+
+// 手机信息导航
+.tit{
+	width: 100%;
+	border-top: 1px solid #e0e0e0;
+	border-bottom: 1px solid #e0e0e0;
+	box-shadow: 0 3px 10px #e0e0e0;
+}
+.tit-nav{
+	width: 1226px;
+	height: 60px;
+	margin: 0 auto;
+	font-size: 14px;
+	line-height: 60px;
+	color: #616161;
+	display: flex;
+	justify-content: space-between;
+	
+	a{color: #616161;}
+	a:hover{
+		color: #ff6700;;
+	}
+	span{
+		margin-left: 6px;
+		margin-right: 3px;
+	}
+	.tit-left{
+		h3{
+			display: inline-block;
+			font-size: 18px;
+		}
+	}	
+}
+// 手机详细信息
+.phoneData{
+	width: 1226px;
+	height: 1332px;
+	margin: 0 auto;
+	padding-top: 32px;
+	padding-bottom: 12px;
+	display: flex;
+	justify-content: space-between;
+	.data-left{
+		width: 560px;
+		height: 560px;
+		background: red;
+	}
+	.data-right{
+		width: 606px;
+		height: 855px;
+		// background: goldenrod;
+		h2:nth-child(1){
+			font-size: 24px;
+			font-weight: normal;
+			color: #212121;
+		}
+		p:nth-child(2){
+			font-size: 14px;
+			color: #b0b0b0;
+			padding-top: 8px;
+			span{
+				color: rgb(255, 74, 0);
+			}		
+		}
+		p:nth-child(3){
+			margin-top: 15px;
+			color: #ff6700;
+		}
+		p:nth-child(4){
+			font-size: 18px;
+			line-height: 1;
+			color: #ff6700;
+			border-bottom: 1px solid #e0e0e0;
+			padding: 12px 0 20px;
+			s{
+				font-size: 14px;
+				margin-left: 5px;
+				color: #b0b0b0;
+			}
+		}
+		.diZhi{
+			width: 100%;
+			background: #fafafa;
+			border: 1px solid #e0e0e0;
+			padding: 30px 40px 30px 32px;
+		}
+	}
+}

@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>小米手机</title>
+	<title>小米手机-Redmi 7A</title>
 	<link rel="stylesheet" type="text/css" href="css/gongyong.css">	
-	<link rel="stylesheet" type="text/css" href="css/phone.css">	
+	<link rel="stylesheet" type="text/css" href="css/phone-data.css">
 </head>
 <body>
 <!-- 头部 -->
@@ -55,58 +55,37 @@
 		<input type="text" class="text"><input type="button" class="button">
 	</form>
 </nav>
-<!-- 轮播图 -->	
-<div id="lunBuoTu" class="zhnaShi" ></div>
-<!-- 产品 -->
-<div class="phoneChanpin">
-	<h2>明星产品</h2>
-	<div class="zhuda">		
-		<a class="zhudaImg" href="#"><img src="img/shouji/097f0cf50bebae139744def8bc62d6df.jpg" alt=""></a>
-		<div class="zhudaText">
-			<h2><a href="#">Redmi K20 Pro</a></h2>
-			<p>骁龙855处理器, 弹出式极界全面屏</p>
-			<p><span>2299</span>元起&nbsp;&nbsp;<s>2599元</s></p>
-			<p><a href="#">了解产品></a></p>
-		</div>				
+<!-- 手机信息导航 -->
+<div class="tit">
+	<div class="tit-nav">
+		<div class="tit-left">
+			<h3>Redmi 7A</h3>
+			<span>|</span>
+			<a href="#"> Redmi 7</a>
+		</div>
+		<div class="tit-right">
+			<a href="">概述</a><span>|</span>
+			<a href="">参数</a><span>|</span>
+			<a href="">F码通道</a><span>|</span>
+			<a href="">用户评价</a>
+		</div>
 	</div>
-	
-	<div class="phone_call"></div>	
 </div>
-		
+<div class="phoneData">
+	<div class="data-left"></div>
+	<div class="data-right">
+		<h2>Redmi 7A</h2>
+		<p><span>「2GB+16GB，直降50，到手价499元」</span>骁龙8核高性能处理器，最高主频2.0GHz / 4000mAh超长续航，标配10W充电器 / 大字体，大音量，无线收音机 / AI人脸解锁 / 整机生活防泼溅 / 极简模式，亲情守护</p>
+		<p>小米自营</p>
+		<p>499元<s>549元</s></p>
+		<div class="diZhi">
+			<span>北京</span>
+			<span>北京市</span>
+			<span>东城区</span>
+			<span>安定门街道</span>
+			<span>修改</span>
+		</div>
+	</div>
+</div>
 </body>
 </html>
-<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="js/ajax.js"></script>
-<script type="text/javascript" src="js/lunbuotu.js"></script>
-<script type="text/javascript" src="js/phonecall.js"></script>
-<script type="text/javascript">
-window.onload = function(){
-	new BannerPlayer({
-		width:1226,
-		height:620,
-		ulPosition:"中",
-		imgs:["img/shouji/phone1.jpg","img/shouji/phone2.jpg"],
-	},$("#lunBuoTu")[0]);
-	
-	
-	for(let i=1 ;i<=4;i++){		
-		let id = "00"+i;		
-		ajax({
-			"url":"php/getGoodsInfo.php",
-			"param":`goodsId=${id}`,
-			"func":chuang
-		})
-	}
-		
-}
-function chuang(src){
-	// console.log(src);
-	let arr = JSON.parse(src);
-	new Phonecall({
-		url:arr.goodsImg,
-		textTit:arr.goodsName,
-		textP:arr.goodsDesc,
-		jiage1:arr.goodsPrice
-	},$(".phone_call")[0])	
-}		
-</script>
